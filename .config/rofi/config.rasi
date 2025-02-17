@@ -5,11 +5,11 @@
 
 /* ---- Window ---- */
 window {
-    width:	50%;
+    width:	16%;
 }
 /* ---- Listview ---- */
 listview {
-  columns: 5;
+  columns: 3;
   lines: 5;
   fixed-height:	true;
 }
@@ -22,7 +22,7 @@ element {
 }
 
 element-icon {
-  size: 3%;
+  size: 4%;
 }
 
 element-text {

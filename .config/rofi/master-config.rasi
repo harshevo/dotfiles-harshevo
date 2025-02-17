@@ -40,26 +40,30 @@ window {
     // Default
     enabled:                    true;
     fullscreen:                 false;
-    transparency:               "real";
     cursor:                     "default";
     spacing:                    0px;
-    border:                     3px 0px 3px 0px;
-    border-radius:              30px;
-    location:                   center;
-    anchor:                     center;
+    border:                     1px 1px 1px 1px;
+    border-radius:              10px;
+    location:                   east;
+    anchor:                     north;
+		orientation:								horizontal;
 
     // Style Values
-    width:                      50%;
-    background-color:           @background;
+		height:											90%;
+    width:                      40%;
+		xoffset: 10;
+		yoffset: 10;
+
+    background-color:           "hex #00000000";
 }
 
 /* ----- Main Box ----- */
 mainbox {
-	padding:					 12px;
+		padding:										10px;
     enabled:                     true;
     orientation:                 vertical;
+    background-color:            "hex #00000000";
     children:                    [ "inputbar", "listbox" ];
-    background-color:            transparent;
 }
 
 
@@ -68,22 +72,21 @@ inputbar {
     enabled:                     true;
     padding:                     10px 10px 50px 10px;
     margin:                      10px;
-    background-color:            transparent;
-    border-radius:               25px;
+    border-radius:               10px;
     orientation:                 horizontal;
     children:                    ["entry", "dummy", "mode-switcher" ];
-    background-image:            url("~/.config/rofi/.current_wallpaper", width);
 }
 
 /* ---- Entry input ---- */
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       20%;
+    width:                       12%;
     padding:                     10px;
-    border-radius:               12px;
-    background-color:            @selected;
-    text-color:                  @text-selected;
+    border-radius:               5px;
+    border:                     1px 1px 1px 1px;
+    background-color:            "hex #00000000";
+    text-color:                  "hex #11111111";
     cursor:                      text;
     placeholder:                 " 🖥️ Search "; // << Search symbol
     placeholder-color:           inherit;
@@ -93,7 +96,6 @@ entry {
 listbox {
     spacing:                     10px;
     padding:                     10px;
-    background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
 }
@@ -111,7 +113,7 @@ listview {
     fixed-height:                false;
     fixed-columns:               true;    
     spacing:                     10px;
-    background-color:            transparent;
+    background-color:            "hex #00000000";
 
 //  Adapt rofi theme
     border:                      0px;
@@ -119,20 +121,20 @@ listview {
 
 /* ---- Dummy ---- */
 dummy {
-    expand:                      true;
-    background-color:            transparent;
+    expand:                      false;
+		background-color:							"hex #00000000";
 }
 
 /* ---- Mode Switcher ---- */
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
-    background-color:            transparent;
+    background-color:            "hex #00000000";
 }
 button {
     width:                       5%;
     padding:                     12px;
-    border-radius:               12px;
+    border-radius:               10px;
     background-color:            @text-selected;
     text-color:                  @text-color;
     cursor:                      pointer;
@@ -155,8 +157,8 @@ element {
     enabled:                     true;
     spacing:                     10px;
   	padding: 					 10px;
-    border-radius:               12px;
-    background-color:            transparent;
+    border-radius:               10px;
+		background-color:            "hex #00000000";
     cursor:                      pointer;
 }
 
@@ -174,8 +176,8 @@ element normal.active {
 }
 
 element selected.normal {
-    border:                      0px 3px 0px 3px;
-    border-radius:               16px;
+    border:                      1px 1px 1px 1px;
+    border-radius:               10px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @background-alt;
