@@ -22,7 +22,7 @@ sd() {
   fi
 }
 
-
+export PATH="$HOME/.local/scripts:$PATH"
 # Check archlinux plugin commands here
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
 
