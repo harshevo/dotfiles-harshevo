@@ -12,13 +12,13 @@
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
-"position": "top",
-"spacing": 3,
+"position": "bottom",
+"spacing": 0,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 3,
-"margin-left": 8,
-"margin-right": 8,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
 
 "modules-left": [
 	"custom/separator#blank",
